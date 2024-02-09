@@ -1,7 +1,5 @@
 import pandas as pd
-
 import numpy as np
 
-print("Panda version", pd.__version__)
-
-print(np.__version__)
+print("Pandas version:", pd.__version__)
+print("NumPy version:", np.__version__)
