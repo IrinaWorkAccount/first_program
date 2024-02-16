@@ -1,0 +1,31 @@
+# Import required libraries
+# We use try-except blocks to ensure that the code remains executable even in case of errors (e.g., if Pandas or NumPy are not installed).
+try:
+    import pandas as pd
+except ImportError:
+    print("Pandas is not installed. Please install it to continue.")
+    pd = None
+
+try:
+    import numpy as np
+except ImportError:
+    print("NumPy is not installed. Please install it to continue.")
+    np = None
+
+def print_library_versions():
+    """
+    This function prints the versions of the installed Pandas and NumPy libraries.
+    If a library is not installed, it outputs an appropriate message.
+    """
+    if pd is not None:
+        print("Pandas version:", pd.__version__)
+    else:
+        print("Pandas is not available.")
+    
+    if np is not None:
+        print("NumPy version:", np.__version__)
+    else:
+        print("NumPy is not available.")
+
+# Call the function to print the versions
+print_library_versions()
